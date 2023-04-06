@@ -37,9 +37,14 @@ public class MainActivity extends AppCompatActivity {
                 String login=editlogin.getText().toString();
                 String mdp=editMdp.getText().toString();
                 VisiteurDAO visiteurAcces = new VisiteurDAO();
-                visiteurAcces.seConnecter(login,mdp);
-                Intent intent = new Intent(v.getContext(), PropositionActivity.class);
+                boolean isConnected = visiteurAcces.seConnecter(login,mdp);
+                if (isConnected){
+                    Intent intent = new Intent(v.getContext(), PropositionActivity.class);
                 startActivity(intent);
+                }
+                else{
+                    
+                }
 
 
             }
