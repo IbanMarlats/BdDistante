@@ -121,7 +121,7 @@ public class VisiteurDAO {
         }
         return result;
     }
-    public Visiteur seConnecter(String unLogin, String unMdp)
+    public Boolean seConnecter(String unLogin, String unMdp)
     {
         String result = "";
         String myUrl="https://iban336.alwaysdata.net/API/supVisiteurByIdV.php";
@@ -140,8 +140,8 @@ public class VisiteurDAO {
             list=this.getVisiteurs();
             for (Visiteur unVisiteur:list) {
                 try{
-                    if (unVisiteur.getId().equals(unLogin) && unVisiteur.getMdp().equals(unMdp)) {
-                        return unVisiteur;
+                    if (unVisiteur.getLogin().equals(unLogin) && unVisiteur.getMdp().equals(unMdp)) {
+                        return true;
                     }
                 }catch(Exception e){
                     throw new Error("error 400");

@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".controleur.PropositionActivity">
+
     <Button
         android:id="@+id/ajouter"
-        android:layout_width="188dp"
-        android:layout_height="70dp"
+        android:layout_width="414dp"
+        android:layout_height="114dp"
         android:layout_marginTop="56dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="4dp"
         android:text="AJOUTER"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -19,21 +20,19 @@
         android:id="@+id/consulter"
         android:layout_width="412dp"
         android:layout_height="108dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="4dp"
         android:text="Consulter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ajouter" />
 
     <Button
-        android:id="@+id/btnModif"
-        android:layout_width="232dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="276dp"
+        android:id="@+id/modifier"
+        android:layout_width="376dp"
+        android:layout_height="105dp"
         android:text="MODIFIER"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.91"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/consulter" />
 

@@ -18,7 +18,7 @@ public class PropositionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_proposition);
         btnAjouter=findViewById(R.id.ajouter);
         btnConsulter=findViewById(R.id.consulter);
-        btnModif=findViewById(R.id.btnModif);
+        btnModif=findViewById(R.id.modifier);
         btnAjouter.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -30,6 +30,13 @@ public class PropositionActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), ConsultActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnModif.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), ModifierActivity.class);
                 startActivity(intent);
             }
         });
