@@ -95,12 +95,12 @@ public class DetailsActivity extends AppCompatActivity {
     private void update(){
         VisiteurDAO visiteurAcces = new VisiteurDAO();
         ArrayList<Visiteur> listeVisiteur;
-        try{
+        /*try{
             listeVisiteur=visiteurAcces.getVisiteurs();
         }
         catch (JSONException e){
             e.printStackTrace();
-        }
+        }*/
         Visiteur unVisiteur= new Visiteur(id.getText().toString(), nom.getText().toString(), prenom.getText().toString(), login.getText().toString(), mdp.getText().toString(), adresse.getText().toString(),
                 cp.getText().toString(), ville.getText().toString(), dateEmbauche.getText().toString());
         String id=idrecu;
